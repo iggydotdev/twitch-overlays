@@ -32,7 +32,7 @@
 		facebook={config.facebook} 
 		youtube={config.youtube}
 		twitter={config.twitter}
-		nowPlaying={config.song}
+		song={config.song}
 		follower={config.lastFollower}
 	/>
 	

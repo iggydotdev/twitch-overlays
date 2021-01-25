@@ -11,25 +11,33 @@
 <footer>
     <div class='social-media'>
         <div class='facebook'>
-            <div>f</div> <div>{facebook}</div>
+            <p>Facebook</p>
+            <p>{facebook}</p>
         </div>
         
         <div class='youtube'>
-            <div>ytb</div><div>{youtube}</div>
+            <p>Youtube</p>
+            <p>{youtube}</p>
         </div>
 
         <div class='twitter'>
-            <div>Twitter</div><div>{twitter}</div>
+            <p>Twitter</p>
+            <p>{twitter}</p>
         </div>
     </div>
 
     <div class='now-playing'>
-        <div>Now playing: </div> <div>{song}</div>
+        <p>Now playing: </p> 
+        <marquee direction="left" behavior="scroll" scrollamount="12">{song}</marquee>
     </div>
 
     <div class='last-follower'>
         <div class='follow'>
-            <div>Last follow:</div> <div>{follower}</div>
+            {#if !!follower}
+                <p>Last follower</p> <p>{follower}</p>
+            {:else}
+                <p> Be the first follower!</p>
+            {/if}
         </div>
     </div>
 </footer>
@@ -38,22 +46,18 @@
 <style>
    
     footer {
-        height: 50px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         color: white;
         background-color: royalblue;
-        padding-left: 20px;
-        padding-right: 20px;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 16px;
         position: fixed;
         bottom: 0;
         width: calc(100% - 40px);
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 20px;
     }
 
     .visually-hidden {
@@ -73,6 +77,29 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+    }
+
+    .facebook, .youtube, .twitter, .follow {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    marquee {
+        margin-left: 10px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .facebook p:last-of-type, 
+    .youtube p:last-of-type, 
+    .twitter p:last-of-type, 
+    .follow p:last-of-type {
+        margin-bottom: 0;
     }
 
 

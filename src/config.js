@@ -9,7 +9,7 @@ export const config = {
    youtube: "youtube.com",
    twitter: "@iggydotdev",
    song: "ChipTunes Vol1",
-   lastFollower: "Billy Puertas",
+   lastFollower: "",
 
 };
 
