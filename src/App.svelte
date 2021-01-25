@@ -1,7 +1,11 @@
 <script>
+	
+	import config from './config.js';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
-	import config from './config.js';
+	import VSCode from './VSCode.svelte';
+	import Webcam from './Webcam.svelte';
+	import Chat from './Chat.svelte';
 </script>
 
 <main>
@@ -13,12 +17,23 @@
 		description={config.description}
 		topContributor={config.topContributor}
 	/>
+
+	<section>
+		<div class="left-column">
+			<VSCode/>
+		</div>
+		<div class="right-column">
+			<Chat/>
+			<Webcam/>
+		</div>
+	</section>
+		
 	<Footer 
 		facebook={config.facebook} 
 		youtube={config.youtube}
 		twitter={config.twitter}
 		nowPlaying={config.song}
-		lastFollower={config.lastFollower}
+		follower={config.lastFollower}
 	/>
 	
 </main>
@@ -42,5 +57,21 @@
 		main {
 			max-width: none;
 		}
+	}
+
+
+	section {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+	}
+
+	.left-column {
+		width: 100%;
+	}
+	.right-column {
+		width: 320px;
+		display: flex;
+		flex-flow: column nowrap;
 	}
 </style>

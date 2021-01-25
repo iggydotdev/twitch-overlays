@@ -12,17 +12,23 @@
     <h1 class='visually-hidden'>Twitch Streaming overlay</h1>
 
     <div class='left-column'>
-        <div>{streamerName}</div>
-        <div>{channel}</div>
+        <p>{streamerName} </p> 
+       {#if !!channel} 
+        <span> @ </span>
+        <p>{channel}</p>
+        {/if}
     </div>
     
-    <div class='center-column'>
-        <div>{title}</div>
-        <div>{description}</div>
-    </div>
+    <marquee direction="left" behavior="scroll" scrollamount="12" class='center-column'>
+        <div>{title} - {description}</div>
+    </marquee>
 
     <div class='right-column'>
-        <div>Top Contributor: {topContributor}</div>
+        {#if !!topContributor}
+            <div>Top Contributor: {topContributor}</div>
+        {:else}
+            <div> Be the first contributor! </div>
+        {/if}
     </div>
 </header>
 
@@ -41,8 +47,6 @@
         padding-right: 20px;
         font-weight: normal;
         font-size: 10px;
-        position: fixed;
-        top: 0;
         width: calc(100% - 40px);
     }
 
@@ -56,6 +60,8 @@
         width: 1px;
     }
 
+
+
     .left-column, 
     .right-column,
     .center-column {
@@ -63,9 +69,25 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+        margin: 0 20px;
+        font-size: 16px;
+        width: 100%;
     }
 
+    .left-column {
+        justify-content: flex-start;
+    }
+    .right-column {
+        justify-content: flex-end;
+    }
 
+    p {
+        margin: 0;
+        padding: 0;
+    }
 
+    span {
+        margin: 0 10px;
+    }
 
 </style>

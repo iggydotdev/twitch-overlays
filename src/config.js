@@ -5,11 +5,11 @@ export const config = {
    description: "We are building this wonderfull customizable componentalized overlays for twitch streamers... So good!",
    topContributor: "",
 
-   facebook: "",
-   youtube: "",
+   facebook: "facebook.com",
+   youtube: "youtube.com",
    twitter: "@iggydotdev",
-   song: "",
-   lastFollower: "",
+   song: "ChipTunes Vol1",
+   lastFollower: "Billy Puertas",
 
 };
 
