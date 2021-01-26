@@ -53,21 +53,11 @@
         color: white;
         background-color: royalblue;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 12px;
         position: fixed;
         bottom: 0;
         width: calc(100% - 40px);
         padding: 20px;
-    }
-
-    .visually-hidden {
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
     }
 
     .social-media, 

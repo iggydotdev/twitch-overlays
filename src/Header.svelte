@@ -50,16 +50,6 @@
         width: calc(100% - 40px);
     }
 
-    .visually-hidden {
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-    }
-
 
 
     .left-column, 
@@ -70,7 +60,6 @@
         justify-content: center;
         align-items: center;
         margin: 0 20px;
-        font-size: 16px;
         width: 100%;
     }
 

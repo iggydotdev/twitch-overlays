@@ -1,5 +1,5 @@
 <script>
-    const styles = `width: auto; height: 460px`;
+    const styles = `width: auto; height: 610px`;
 </script>
 
 <div class='chat-container' style={styles}></div>

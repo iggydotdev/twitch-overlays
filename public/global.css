@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Press Start 2P", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 16px;
 }
 
 a {
@@ -62,4 +63,15 @@ button:not(:disabled):active {
 
 button:focus {
 	border-color: #666;
+}
+
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }

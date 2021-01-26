@@ -1,21 +1,22 @@
 <script>
 	
-	import config from './config.js';
+	import config from './config/index';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import VSCode from './VSCode.svelte';
 	import Webcam from './Webcam.svelte';
 	import Chat from './Chat.svelte';
+
 </script>
 
 <main>
 
 	<Header 
-		streamerName={config.streamerName} 
-		channel={config.channel}
-		title={config.title}
-		description={config.description}
-		topContributor={config.topContributor}
+		streamerName={config.header.streamerName} 
+		channel={config.header.channel}
+		title={config.header.title}
+		description={config.header.description}
+		topContributor={config.header.topContributor}
 	/>
 
 	<section>
@@ -23,17 +24,17 @@
 			<VSCode/>
 		</div>
 		<div class="right-column">
-			<Chat/>
-			<Webcam/>
+			<Chat />
+			<Webcam w={config.webcam.width} h={config.webcam.height} />
 		</div>
 	</section>
 		
 	<Footer 
-		facebook={config.facebook} 
-		youtube={config.youtube}
-		twitter={config.twitter}
-		song={config.song}
-		follower={config.lastFollower}
+		facebook={config.footer.facebook} 
+		youtube={config.footer.youtube}
+		twitter={config.footer.twitter}
+		song={config.footer.song}
+		follower={config.footer.lastFollower}
 	/>
 	
 </main>
@@ -44,13 +45,6 @@
 		padding: 0;
 		max-width: 240px;
 		margin: 0;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {

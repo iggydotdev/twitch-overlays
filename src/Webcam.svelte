@@ -1,5 +1,8 @@
 <script>
-    const styles = `width: auto; height: 180px`;
+    export let w;
+    export let h;
+    const styles = `width: ${w}; height: ${h}px`;
+    console.log(w, h)
 </script>
 
 <div class='webcam-container' style={styles}></div>
