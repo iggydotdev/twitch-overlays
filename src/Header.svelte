@@ -36,7 +36,7 @@
 <style>
    
     header {
-        height: 50px;
+        height: 5vh;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;

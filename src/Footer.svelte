@@ -56,12 +56,12 @@
         font-size: 12px;
         position: fixed;
         bottom: 0;
-        width: calc(100% - 40px);
-        padding: 20px;
+        width: 100%;
+        padding: 5px;
+        height: 5vh;
     }
 
-    .social-media, 
-    .now-playing,
+    .social-media,
     .last-follower {
         display: flex;
         flex-flow: row nowrap;
@@ -71,7 +71,7 @@
 
     .facebook, .youtube, .twitter, .follow {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
         justify-content: space-evenly;
         align-items: center;
         padding: 10px 20px;
@@ -82,7 +82,8 @@
     }
 
     p {
-        margin-top: 0;
+        margin: 0;
+        margin-right: 10px;
     }
 
     .facebook p:last-of-type, 

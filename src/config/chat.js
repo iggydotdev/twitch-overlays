@@ -1,5 +1,5 @@
 export const chat = {
-    heigth: '610',
+    height: '630',
     width: '320',
     padding: '',
     margin: '',
